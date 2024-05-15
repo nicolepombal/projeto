@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.projeto;
-import javax.swing.JOptionPane;
-import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
         
 /**
  *
@@ -37,10 +37,9 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
-        esqueceusenhaButton = new javax.swing.JTextField();
         entrarButton = new javax.swing.JButton();
         criarcontaButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jLabel3.setText("jLabel3");
 
@@ -61,9 +60,6 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel2.setText("Senha:");
 
-        esqueceusenhaButton.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        esqueceusenhaButton.setText("Esqueceu senha?");
-
         entrarButton.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         entrarButton.setText("Entrar");
         entrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -74,8 +70,19 @@ public class TelaLogin extends javax.swing.JFrame {
 
         criarcontaButton.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         criarcontaButton.setText("Criar Conta");
+        criarcontaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                criarcontaButtonActionPerformed(evt);
+            }
+        });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo.jpeg"))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton1.setText("Esqueceu senha?");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelTelaLoginLayout = new javax.swing.GroupLayout(painelTelaLogin);
         painelTelaLogin.setLayout(painelTelaLoginLayout);
@@ -95,22 +102,17 @@ public class TelaLogin extends javax.swing.JFrame {
                     .addGroup(painelTelaLoginLayout.createSequentialGroup()
                         .addGap(204, 204, 204)
                         .addComponent(entrarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(esqueceusenhaButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52)
+                        .addComponent(jButton1))
                     .addGroup(painelTelaLoginLayout.createSequentialGroup()
                         .addGap(240, 240, 240)
-                        .addComponent(criarcontaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelTelaLoginLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel5)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                        .addComponent(criarcontaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         painelTelaLoginLayout.setVerticalGroup(
             painelTelaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelTelaLoginLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(517, 517, 517)
                 .addGroup(painelTelaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -121,7 +123,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(painelTelaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(entrarButton)
-                    .addComponent(esqueceusenhaButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1))
                 .addGap(18, 18, 18)
                 .addComponent(criarcontaButton)
                 .addGap(21, 21, 21))
@@ -191,6 +193,16 @@ public class TelaLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_entrarButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void criarcontaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarcontaButtonActionPerformed
+        TelaCadastro cadastro = new TelaCadastro();
+        cadastro.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_criarcontaButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -229,11 +241,10 @@ public class TelaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton criarcontaButton;
     private javax.swing.JButton entrarButton;
-    private javax.swing.JTextField esqueceusenhaButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField loginTextField;
