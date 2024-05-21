@@ -3,10 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.projeto;
-import javax.swing.*;
-import java.awt.*;
-
-//import java.awt.BorderLayout;
 
 /**
  *

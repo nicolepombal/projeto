@@ -4,7 +4,6 @@
  */
 package com.mycompany.projeto;
 import javax.swing.*;
-import java.awt.*;
         
 /**
  *
