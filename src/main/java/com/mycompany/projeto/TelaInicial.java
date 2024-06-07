@@ -84,6 +84,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(20, 60, 121));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(153, 204, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
